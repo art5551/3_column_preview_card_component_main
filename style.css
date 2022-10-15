@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* transparent white for the paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* very light gray for bacground, heradings and buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  --font-family-title: 'Big Shoulders Display', cursive;
+  --font-family-body: 'Lexend Deca', sans-serif;
+  --font-size:15px;
+}
+
+/* Beginning of reset CSS with minor changes recommended by Kevin Powell */
+/* see youtube https://www.youtube.com/watch?v=h3bTwCqX4ns */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Deviation from KPowell*/
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* End of reset CSS*/
+
+
+/* Attribution is for the fem footer */
+.attribution {
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+ /* setting the initial content attributes here */
+ /* start initial design with mobile design first */
+ body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+section {
+  padding: 2rem 5%;
+  margin-top: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: var(--font-family-title);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+img {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.card p {
+
+  font-family: var(--font-family-body);
+  color: var(--transparent-white);
+  margin-bottom: 80px;
+}
+
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--font-family-body);
+  margin: .25em;
+  padding: 0.5em 1em;
+  text-align: center;
+  border-radius: 1em;
+  border: none;
+  background: white;
+  cursor: pointer;
+  /* these two settings combined with setting flex: column on the card maade buttons align */
+  margin-top: auto;
+  align-self: flex-start;
+
+}
+
+.btn:hover {
+  background: gray;
+}
+
+.sedan-btn {
+  color: var(--bright-orange);
+}
+
+.suvs-btn {
+  color: var(--dark-cyan);
+}
+
+.luxury-btn {
+  color: var(--very-dark-cyan);
+}
+
+@media (min-width: 800px) {
+
+  body {
+    align-items: center;
+  }
+  .flex {
+    flex-direction: row;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+
+}
+
+
