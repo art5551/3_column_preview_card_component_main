@@ -123,6 +123,8 @@ section {
 
 .title {
   font-family: var(--font-family-title);
+  color: white;
+  text-transform: uppercase;
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -165,13 +167,15 @@ img {
   display: inline-block;
   text-decoration: none;
   font-family: var(--font-family-body);
+  font-size: 12px;
   margin: .25em;
   padding: 0.5em 1em;
   text-align: center;
-  border-radius: 1em;
+  border-radius: 1.5em;
   border: none;
   background: white;
   cursor: pointer;
+  margin-bottom: 20px;
   /* these two settings combined with setting flex: column on the card maade buttons align */
   margin-top: auto;
   align-self: flex-start;
