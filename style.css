@@ -117,6 +117,7 @@ section {
 .card {
   padding: 15px 20px;
   display: flex;
+  /* This was necesary to make buttons align */
   flex-direction: column;
 }
 
@@ -149,6 +150,14 @@ img {
   font-family: var(--font-family-body);
   color: var(--transparent-white);
   margin-bottom: 80px;
+}
+
+.sedans {
+  border-radius: 10px 10px 0 0;
+}
+
+.luxury {
+  border-radius: 0 0 10px 10px;
 }
 
 
