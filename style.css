@@ -107,6 +107,7 @@ svg {
 section {
   padding: 2rem 5%;
   margin-top: 20px;
+  width: 320px;
 }
 
 .flex {
@@ -151,7 +152,7 @@ img {
 
   font-family: var(--font-family-body);
   color: var(--transparent-white);
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .sedans {
@@ -203,6 +204,13 @@ img {
   body {
     align-items: center;
   }
+
+  section {
+    padding: 2rem 5%;
+    margin-top: 20px;
+    width: 900px;
+  }
+
   .flex {
     flex-direction: row;
   }
@@ -210,6 +218,14 @@ img {
   .container {
     max-width: 900px;
   }
+
+  .card p {
+
+    font-family: var(--font-family-body);
+    color: var(--transparent-white);
+    margin-bottom: 80px;
+  }
+  
 
   .sedans {
     border-radius: 10px 0 0 10px;
